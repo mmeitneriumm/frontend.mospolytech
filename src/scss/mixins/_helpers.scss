@@ -1,0 +1,13 @@
+@mixin last-row($count) { // Для элементов в последнем ряду, $count - максимальное количество элементов в ряду
+  &:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}),
+  &:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}) ~ & {
+    @content;
+  }
+}
+
+@mixin last-row-with-item($count, $item) {
+	&:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}),
+	&:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}) ~ #{$item} {
+		@content;
+	}
+}

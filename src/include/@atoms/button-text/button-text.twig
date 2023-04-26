@@ -1,0 +1,20 @@
+{% if button.non_interactive %}
+<div class="button-text button-text--non-interactive{% if button.class %}{{button.class}}{% endif %}{% if button.theme %}{{button.theme}}{% endif %}">
+    {% if button.text %}
+        <span class="button-text__text">{{ buton.text }}</span>
+    {% endif %}
+</div>
+{% else %}
+    {% if button.href %}
+        <a href="{{button.href}}" class="button-text{% if button.class %}{{ button.class }}{% endif %}{% if button.theme %}{{ button.theme }}{% endif %}{% if button.disabled %}{{ button.disabled }}{% if button.attr %}{{ button.attr }}{% endif %}{% if button.title %}{{ button.title }}{% endif %}">
+            {% if button.text %}
+                <span class="button-text__text">{{ button.text }}</span>
+        </a>
+    {% else %}
+        <button type="{{button.type?: "button"}}" class="button-text{% if button.class %}{{ button.class }}{% endif %}{% if button.theme %}{{ button.theme }}{% endif %}{% if button.disabled %}{{ button.disabled }}{% if button.attr %}{{ button.attr }}{% endif %}{% if button.title %}{{ button.title }}{% endif %}">
+            {% if button.text %}
+                <span class="button-text_text">{{ button.text }}</span>
+            {% endif %}
+        </button>
+    {% endif %}
+{% endif %}

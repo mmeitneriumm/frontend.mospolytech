@@ -1,0 +1,9 @@
+.idea
+dist/
+node_modules/
+.vscode/
+.DS_Store
+
+yarn.lock
+
+src/scss/components.scss

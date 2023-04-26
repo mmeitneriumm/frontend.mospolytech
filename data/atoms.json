@@ -1,0 +1,142 @@
+{
+    "title": "Атомы",
+    "icons": {
+        "32px": [
+            {
+                "name": "32/menu"
+            },
+            {
+                "name": "32/loop"
+            },
+            {
+                "name": "32/profile"
+            },
+            {
+                "name": "32/eye"
+            },
+            {
+                "name": "32/timetable"
+            },
+            {
+                "name": "32/news"
+            },
+            {
+                "name": "32/calendar"
+            },
+            {
+                "name": "32/fb"
+            },
+            {
+                "name": "32/inst"
+            },
+            {
+                "name": "32/envelope"
+            },
+            {
+                "name": "32/vk"
+            },
+            {
+                "name": "32/youtube"
+            },
+            {
+                "name": "32/mel"
+            },
+            {
+                "name": "32/dzen"
+            },
+            {
+                "name": "32/plus"
+            },
+            {
+                "name": "32/minus"
+            },
+            {
+                "name": "32/viber"
+            },
+            {
+                "name": "32/whatsapp"
+            },
+            {
+                "name": "32/exit"
+            },
+            {
+                "name": "32/question"
+            }
+        ]
+    },
+    "buttons":[
+        {
+            "text": "Подробнее",
+            "title": "button"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "button"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "button",
+            "disabled": true
+        }
+    ],
+    "buttonsTextBackgroundLight": [
+        {
+            "text": "Подробнее",
+            "title": "button",
+            "background": "light"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "button",
+            "background": "light"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "button",
+            "disabled": true
+        }
+    ],
+    "linksAction": [
+        {
+            "text": "Подробнее",
+            "title": "link"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "link"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "link",
+            "disabled": true
+        }
+    ],
+    "linksActionBackgroundLight": [
+        {
+            "text": "Подробнее",
+            "title": "link",
+            "background": "light"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "link",
+            "background": "light"
+        },
+        {
+            "href": "javascript:void(0);",
+            "text": "Подробнее",
+            "title": "link",
+            "disabled": true,
+            "background": "light"
+        }
+    ]
+
+    
+}

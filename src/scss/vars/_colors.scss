@@ -1,0 +1,9 @@
+$color-white: #fff !default;
+$color-black: #000 !default;
+
+// Color system:
+// 'colorName': 'color'
+$colors: (
+  "white": $color-white,
+  "black": $color-black,
+);

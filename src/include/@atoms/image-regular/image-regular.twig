@@ -1,0 +1,36 @@
+{% if image.type == 'bg' %}
+	{% if image.disable_lazy %}
+		<div class="image{% if image.class %} {{ image.class }}{% endif %}{{ image.fill ? ' fill' : '' }}"
+			 role="img"{% if image.attr %} {{ image.attr }}{% endif %}
+			 aria-label="{{ image.alt ?: image.caption ?: 'image' }}"
+			 style="background-image: url('{{ image.src }}');"{% if image.size.width and image.size.height %} data-size="{{ image.size.width }}x{{ image.size.height }}" data-gallery-image="{{ image.src }}"{% endif %}></div>
+	{% elseif image.swiper_lazy %}
+		<div class="image swiper-lazy{% if image.class %} {{ image.class }}{% endif %}{{ image.fill ? ' fill' : '' }}"
+			 role="img"{% if image.attr %} {{ image.attr }}{% endif %}
+			 aria-label="{{ image.alt ?: image.caption ?: 'image' }}"
+			 data-background="{{ image.src }}"{% if image.size.width and image.size.height %} data-size="{{ image.size.width }}x{{ image.size.height }}" data-gallery-image="{{ image.src }}"{% endif %}></div>
+		<div class="swiper-lazy-preloader"></div>
+	{% else %}
+		<div class="image is-lazy{% if image.class %} {{ image.class }}{% endif %}{{ image.fill ? ' fill' : '' }}"
+			 role="img"{% if image.attr %} {{ image.attr }}{% endif %}
+			 aria-label="{{ image.alt ?: image.caption ?: 'image' }}"
+			 data-bg="{{ image.src }}"{% if image.size.width and image.size.height %} data-size="{{ image.size.width }}x{{ image.size.height }}" data-gallery-image="{{ image.src }}"{% endif %}></div>
+	{% endif %}
+{% else %}
+	{% if image.disable_lazy %}
+		<img class="image{% if image.class %} {{ image.class }}{% endif %}{{ image.fill ? ' fill' : '' }}"
+			 src="{{ image.src }}"{% if image.attr %} {{ image.attr }}{% endif %}{% if image.srcset %} srcset="{{ image.srcset }}"{% endif %}
+			 alt="{{ image.alt ?: image.caption ?: 'image' }}"{% if image.size.width and image.size.height %} data-size="{{ image.size.width }}x{{ image.size.height }}" data-gallery-image="{{ image.src }}"{% endif %}>
+	{% elseif image.swiper_lazy %}
+		<img class="image swiper-lazy{% if image.class %} {{ image.class }}{% endif %}{{ image.fill ? ' fill' : '' }}"
+			 src="{{ placeholder?: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' }}"
+			 data-src="{{ image.src }}"{% if image.attr %} {{ image.attr }}{% endif %}{% if image.srcset %} data-srcset="{{ image.srcset }}"{% endif %}
+			 alt="{{ image.alt ?: image.caption ?: 'image' }}"{% if image.size.width and image.size.height %} data-size="{{ image.size.width }}x{{ image.size.height }}" data-gallery-image="{{ image.src }}"{% endif %}>
+		<div class="swiper-lazy-preloader"></div>
+	{% else %}
+		<img class="image is-lazy{% if image.class %} {{ image.class }}{% endif %}{{ image.fill ? ' fill' : '' }}"
+			 src="{{ placeholder?: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' }}"
+			 data-src="{{ image.src }}"{% if image.attr %} {{ image.attr }}{% endif %}{% if image.srcset %} data-srcset="{{ image.srcset }}"{% endif %}
+			 alt="{{ image.alt ?: image.caption ?: 'image' }}"{% if image.size.width and image.size.height %} data-size="{{ image.size.width }}x{{ image.size.height }}" data-gallery-image="{{ image.src }}"{% endif %}>
+	{% endif %}
+{% endif %}
