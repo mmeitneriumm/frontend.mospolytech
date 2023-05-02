@@ -1,0 +1,38 @@
+.burger{
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    color: currentColor;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.burger span{
+    width: 1.5rem;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transition: opacity .3s ease,top .3s ease,-webkit-transform .3s ease;
+    transition: opacity .3s ease,top .3s ease,-webkit-transform .3s ease;
+    -o-transition: transform .3s ease,opacity .3s ease,top .3s ease;
+    transition: transform .3s ease,opacity .3s ease,top .3s ease;
+    transition: transform .3s ease,opacity .3s ease,top .3s ease,-webkit-transform .3s ease;
+}
+
+.burger span:not(:last-child){
+    margin-bottom: 6px;
+}
