@@ -29,28 +29,34 @@
       ]
     },
     "sideBar":{
-      "search": {
-        "icon": {
-          "name": "32/loop"
+      "userSection": [
+        {
+          "icon": {
+            "name": "32/loop"
+          }
         },
-        "attr": "search-nav"
-      },
-      "profile": {
-        "icon": {
-          "name": "32/profile"
+        {
+          "icon": {
+            "name": "32/profile"
+          }
         },
-        "attr": "profile-nav"
-      },
-      "timetable": {
-        "icon": {
-          "name": "32/timetable"
+        {
+          "icon": {
+            "name": "32/timetable"
+          }
         }
-      },
-      "eye": {
-        "icon": {
-          "name": "32/eye"
+      ],
+      "serviceSection": [
+        {
+          "icon": {
+            "name": "32/eye"
+          }
+        },
+        {
+          "text": "EN"
         }
-      }
-    } 
+        
+      ]
+    }
   }
 }
