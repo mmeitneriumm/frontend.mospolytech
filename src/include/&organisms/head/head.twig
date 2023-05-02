@@ -1,0 +1,22 @@
+<div class="head">
+        {% if header.head.logo %}
+            <div class"head__logo">
+                {% if header.head.logo.href %}
+                    <a class="head__logo-link">
+                        <img src="./././img/logo.svg" alt="logo">
+                    </a>
+                {% else %}
+                <div class="head__logo logo--active">
+                    <img src="./././img/logo.svg" alt="logo">
+                </div>
+                 {% endif %}
+            </div>     
+        {% endif %}
+        <ul class="head__list">
+            {% for item in header.head.items %}
+                <li class="head__item">
+                    <a href="{{ item.href }}" class="head__item-link">{{ item.text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>

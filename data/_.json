@@ -9,7 +9,7 @@
 	},
   "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
   "header": {
-    "navigationHead": {
+    "head": {
       "logo": {
         "href": "./"
       },
@@ -28,7 +28,7 @@
         }
       ]
     },
-    "navigationMenu":{
+    "sideBar":{
       "search": {
         "icon": {
           "name": "32/loop"

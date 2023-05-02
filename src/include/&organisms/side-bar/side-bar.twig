@@ -1,0 +1,97 @@
+<div class="side-bar">
+        <div class="side-bar__left">
+            <div class="side-bar__burger">
+                {% view '@burger' %}
+            </div>
+            <div class="side-bar__action">
+                <div class="side-bar__user-block">
+                    <div class="side-bar__user-nav">
+                        <ul class="side-bar__user-list">
+                            <li class="side-bar__item"{% if header.sideBar.item.attr %}{{ header.sideBar.item.attr }}{% endif %}>
+                                {% if header.sideBar.search %}
+                                    <button type="button" class="side-bar__item"{% if header.sideBar.attr %}{{ header.sideBar.attr }}{% endif %}>
+                                        {% if header.sideBar.search.icon %}
+                                            {% view '@icon' with {
+                                                icon: header.sideBar.search.icon
+                                            } %}
+                                        {% else %}
+                                            {% view '@icon' with {
+                                                icon: {
+                                                    name: "32/loop",
+                                                    size: "32"
+                                                }
+                                            } %}
+                                        {% endif %}
+                                    </button>
+                                {% endif %}
+                            </li>
+
+                            <li class="side-bar__item"{% if header.sideBar.item.attr %}{{ header.sideBar.item.attr }}{% endif %}>
+                                {% if header.sideBar.profile %}
+                                    <button type="button" class="side-bar__item"{% if header.sideBar.attr %}{{ header.sideBar.attr }}{% endif %}>
+                                        {% if header.sideBar.icon %}
+                                            {% view '@icon' with {
+                                                icon: header.sideBar.profile.icon
+                                            } %}
+                                        {% else %}
+                                            {% view '@icon' with {
+                                                icon: {
+                                                    name: "32/profile",
+                                                    size: "32"
+                                                }
+                                            } %}
+                                        {% endif %}
+                                    </button>
+                                {% endif %}
+                            </li>
+                        
+                            <li class="side-bar__item"{% if header.sideBar.item.attr %}{{ header.sideBar.item.attr }}{% endif %}>
+                                {% if header.sideBar.timetable %}
+                                    <button type="button" class="side-bar__item"{% if header.sideBar.attr %}{{ header.sideBar.attr }}{% endif %}>
+                                        {% if header.sideBar.icon %}
+                                            {% view '@icon' with {
+                                                icon: header.sideBar.timetable.icon
+                                            } %}
+                                        {% else %}
+                                            {% view '@icon' with {
+                                                icon: {
+                                                    name: "32/timetable",
+                                                    size: "32"
+                                                }
+                                            } %}
+                                        {% endif %}
+                                    </button>
+                                {% endif %}
+                            </li>
+                        </ul>             
+                    </div>     
+                </div>
+                <div class="side-bar__service-block">
+                    <div class="side-bar__service-nav">
+                        <ul class="service-nav__list">
+                            <li class="service-nav__items">
+                                {% if header.sideBar.eye %}
+                                    <button type="button" class="service-nav-item"{% if header.sideBar.attr %}{{ header.sideBar.attr }}{% endif %}>
+                                        {% if header.sideBar.icon %}
+                                            {% view '@icon' with {
+                                                icon: header.sideBar.eye.icon
+                                            } %}
+                                        {% else %}
+                                            {% view '@icon' with {
+                                                icon: {
+                                                    name: "32/eye",
+                                                    size: "32"
+                                                }
+                                            } %}
+                                        {% endif %}
+                                    </button>
+                                {% endif %}
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
