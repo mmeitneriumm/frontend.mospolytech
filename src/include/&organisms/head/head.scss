@@ -63,6 +63,10 @@
         @include media-breakpoint-up(md){
             height: 100%;
         }
+
+        @include media-breakpoint-down(md){
+            display: none;
+        }
     }
     
     &__list{
