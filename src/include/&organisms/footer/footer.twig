@@ -1,1 +1,63 @@
-<footer class="footer"></footer>
+<footer class="footer">
+    <div class="footer__wrapper">
+        {% if footer.nav %}
+            <div class="footer__nav">
+                {% for item in footer.nav %}
+                    <div class="footer__nav-item">
+                        {% if item.text %}
+                            <a href="javascript:void(0);" class="footer__nav-link">
+                                {% if item.icon %}
+                                    {% view '@icon' with {
+                                        icon: item.icon
+                                    } %}
+                                {% endif %}
+
+                                {{item.text}}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if footer.info %}
+            <div class="footer__info">
+                {% for item in footer.info %}
+                    <div class="footer__info-item">
+                        <a href="javascript:void(0);" class="footer__info-link">{{item.text}}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if footer.social %}
+            <div class="footer__social">
+                {% for item in footer.social %}
+                    <div class="footer__social-item">
+                        <a href="javascript:void(0);" class="footer__social-link">
+                            {% if item.icon %}
+                                <i class="footer__social-icon">
+                                    {% view '@icon' with {
+                                        icon: item.icon
+                                    } %}
+                                </i>
+                            {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if footer.copyright %}
+            <div class="footer__copyright">
+                {% if footer.copyright.text %}
+                    <span class="footer__copyright-text">{{footer.copyright.text}}</span>
+                {% endif %}
+                {% if footer.copyright.icon %}
+                    <a href="javascript:void(0);" class="footer__copyright-logo">
+                        {% view '@icon' with {
+                            icon: footer.copyright.icon
+                        } %}
+                    </a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</footer>

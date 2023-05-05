@@ -1,4 +1,6 @@
 .side-bar {
+    $root: &;
+    
     position: fixed;
     width: 100%;
     top: 0;
@@ -18,7 +20,7 @@
         width: 100%;
         padding: 1.3125rem 2.8125rem;
         z-index: 9;
-        color: #fff;
+        color: $color-white;
         transition: none;
     
         @include media-breakpoint-up(md){
@@ -29,7 +31,7 @@
             width: 3.75rem;
             height: 100vh;
             padding: 1.5rem 0;
-            background-color: #1e1e1e;
+            background-color: $color-black;
         }
     }
     
@@ -77,6 +79,10 @@
             }
         }
 
+        .nav-list__item:last-child{
+            margin-bottom: 0;
+        }
+
         .nav-list__item:nth-child(n+2){
             @include media-breakpoint-down(sm){
                 display: none;
@@ -90,18 +96,18 @@
         margin-bottom: 4rem;
 
         .service-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             list-style: none;
             margin: 0;
             padding: 0;
+            
         }
 
         .service-list__item{
             font-size: .75rem;
             letter-spacing: 0.0625rem;
-        }
-
-        .service-list__item-link{
-            align-items: center;
         }
 
         .service-list__item:not(:last-child){

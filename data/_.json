@@ -58,5 +58,109 @@
         
       ]
     }
+  },
+  "footer": {
+    "nav":[
+      {
+        "href": "javascript:void(0);",
+        "text": "Поступающим"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Студентам"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Сотрудникам"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Партнерам"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Факультеты и институты"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Научная деятельность"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Проекты и сообщества"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Университет"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Сведения об образовательной организации"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Новости университета",
+        "icon": {
+          "name": "32/news"
+        }
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Календарь мероприятий",
+        "icon":{
+          "name": "32/сalendar"
+        }
+      }
+    ],
+    "info": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Министерство науки&nbsp;и высшего образования"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Министерство просвещения РФ"
+      }
+    ],
+    "social": [
+      {
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/fb"
+        }
+      },
+      {
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/inst"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/vk"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/youtube"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/mel"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/dzen"
+        }
+      }
+    ],
+    "copyright": {
+        "text": "© 2019 Московский политехнический универститет",
+        "icon": {
+          "name": "32/uplab"
+        }
+    }
   }
 }
