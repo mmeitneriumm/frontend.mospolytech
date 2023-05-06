@@ -5,7 +5,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index:992;
+    z-index:3;
 
     @include media-breakpoint-up(md){
         width: auto;
@@ -50,8 +50,6 @@
         flex-grow: 1;
         flex-basis: auto;
 
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
     }
 
     &__user-section{
@@ -62,9 +60,6 @@
         flex-basis: auto;
         justify-content: center;
 
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-
         .nav-list{
             list-style: none;
             margin: 0;
@@ -73,9 +68,14 @@
 
         .nav-list__item{
             margin-bottom: 3.5rem;
+            transition: opacity .3s ease;
 
             @include media-breakpoint-down(sm){
                 margin-bottom: 0;
+            }
+
+            @include hover{
+                opacity: 0.5;
             }
         }
 
@@ -108,6 +108,11 @@
         .service-list__item{
             font-size: .75rem;
             letter-spacing: 0.0625rem;
+            transition: opacity .3s ease;
+
+            @include hover{
+                opacity: 0.5;
+            }
         }
 
         .service-list__item:not(:last-child){

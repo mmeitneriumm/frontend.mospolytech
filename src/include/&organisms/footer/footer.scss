@@ -83,8 +83,14 @@
         line-height: 2;
         letter-spacing: .79px;
 
+        transition: opacity .3s ease;
+
         @include media-breakpoint-up(md){
             max-width: 15.625rem;
+        }
+        
+        @include hover{
+            opacity: 0.5;
         }
     }
 
@@ -169,6 +175,12 @@
         display: inline-block;
         width: 2rem;
         height: 2rem;
+
+        transition: opacity .3s ease;
+
+        @include hover{
+            opacity: 0.5;
+        }
     }
 
     &__social-icon{
@@ -231,8 +243,14 @@
         color: $color-white;
         opacity: .8;
 
+        transition: opacity .3s ease;
+
         @include media-breakpoint-up(md){
             margin-left: auto;
+        }
+
+        @include hover{
+            opacity: 0.5;
         }
     }
 }

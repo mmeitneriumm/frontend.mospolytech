@@ -11,17 +11,18 @@
     align-items: center;
     padding: 0;
     margin: 0;
+
+    transition: opacity .3s ease;
+
+        @include hover{
+            opacity: 0.5;
+        }
 }
 
 .burger span{
     width: 1.5rem;
     height: 1px;
     background-color: currentColor;
-    -webkit-transition: opacity .3s ease,top .3s ease,-webkit-transform .3s ease;
-    transition: opacity .3s ease,top .3s ease,-webkit-transform .3s ease;
-    -o-transition: transform .3s ease,opacity .3s ease,top .3s ease;
-    transition: transform .3s ease,opacity .3s ease,top .3s ease;
-    transition: transform .3s ease,opacity .3s ease,top .3s ease,-webkit-transform .3s ease;
 }
 
 .burger span:not(:last-child){

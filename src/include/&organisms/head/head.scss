@@ -3,14 +3,10 @@
     position: absolute;
     top: 24px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    z-index: 991;
+    z-index: 2;
 
     @include media-breakpoint-up(md){
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         position: static;
         left: 0;
@@ -28,15 +24,7 @@
     &__logo{
         position: relative;
         width: 6rem;
-        -webkit-transition-timing-function: ease;
-        -o-transition-timing-function: ease;
-        transition-timing-function: ease;
-        -webkit-transition-duration: .3s;
-        -o-transition-duration: .3s;
-        transition-duration: .3s;
-        -webkit-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
+        transition: opacity .3s ease;
     
         @include media-breakpoint-up(md){
             width: 8.75rem;
@@ -76,14 +64,8 @@
         margin: 0 0 0 auto;
     
         @include media-breakpoint-up(md){
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: end;
-            -ms-flex-pack: end;
             justify-content: flex-end;
-            -webkit-box-align: start;
-            -ms-flex-align: start;
             align-items: flex-start;
         }
     }
@@ -93,9 +75,7 @@
         @include hover{
             opacity: 0.5;
         }
-        
-        -webkit-transition: opacity .3s ease;
-        -o-transition: opacity .3s ease;
+
         transition: opacity .3s ease;
         
         &:not(:last-child){
