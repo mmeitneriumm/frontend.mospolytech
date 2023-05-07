@@ -1,0 +1,24 @@
+<div class="menu">
+    {% if menu.nav %}
+        <div class="menu__nav">
+            <ul class="menu__nav-list">
+                {% for item in menu.nav %}
+                    <li class="menu__nav-item">{{item.text}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    {% if menu.cards %}
+        <div class="menu__card"></div>
+    {% endif %}
+    {% if menu.info %}
+    <div class="menu__info">
+        {% if menu.info.links %}
+            <div class="menu__info-links"></div>
+        {% endif %}
+        {% if menu.info.contacts %}
+            <div class="menu__info-contacts"></div>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

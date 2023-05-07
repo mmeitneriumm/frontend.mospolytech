@@ -1,22 +1,35 @@
 <div class="head">
-        {% if header.head.logo %}
+        {% if block.logo %}
             <div class"head__logo"> 
-            {# хардкод логотипа, т.к. пока слайдера нет #}
-                {% if header.head.logo.href %}
+                {% if block.logo.href %}
                     <a class="head__logo-link">
-                        <img src="./././img/logo.svg" alt="logo">
+                        {% view '@icon' with {
+                            icon: {
+                                "name": 'logo'
+                            }
+                        } %}
                     </a>
                 {% else %}
-                <div class="head__logo logo--active">
-                    <img src="./././img/logo.svg" alt="logo">
-                </div>
+                    <div class="head__logo head__logo--active">
+                        {% view '@icon' with {
+                            icon: {
+                                name: 'logo'
+                            }
+                        } %}
+                    </div>
                  {% endif %}
             </div>     
         {% endif %}
-        <ul class="head__list">
-            {% for item in header.head.items %}
+        <ul class="head__items">
+            {% for item in block.items %}
                 <li class="head__item">
-                    <a href="{{ item.href }}" class="head__item-link">{{ item.text }}</a>
+                    {% if item.href %}
+                        <a href="{{ item.href }}" class="head__link">{{ item.text }}</a>
+                    {% else %}
+                        <span class="head__link head__link--active">
+                            {{ item.text }}
+                        </span>
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>

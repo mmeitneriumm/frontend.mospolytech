@@ -1,7 +1,19 @@
 <header class="header" role="banner">
+    {% if header.head %}
+        <div class="header__head">
+            {% view '&head' with {
+                block: header.head
+            } %}
+        </div>
+    {% endif %}
+    {% if header.sideBar %}
+        <div class="header__side-bar">
+            {% view '&side-bar' with {
+                block: header.sideBar
+            } %}
+        </div>
+    {% endif %}
 
-    {% view '&head' %}
-
-    {% view '&side-bar' %}
+    {# {% view '&menu' %} #}
     
 </header>

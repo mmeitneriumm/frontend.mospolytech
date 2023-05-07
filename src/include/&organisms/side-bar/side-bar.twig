@@ -6,11 +6,11 @@
             </div>
             <div class="side-bar__sections">
                 <div class="side-bar__user-section">
-                    <ul class="nav-list">
+                    <ul class="side-bar__nav-list">
                         {% for item in header.sideBar.userSection %}
-                            <li class="nav-list__item">
+                            <li class="side-bar__nav-item">
                                 {% if item.icon %}
-                                    <a href="#" class="nav-list__item-link">
+                                    <a href="#" class="side-bar__nav-link">
                                         {% view '@icon' with {
                                             icon: item.icon
                                         } %}
@@ -21,17 +21,19 @@
                     </ul>
                 </div>
                 <div class="side-bar__service-section">
-                    <ul class="service-list">
-                        {% for item in header.sideBar.serviceSection %}
-                            <li class="service-list__item">
-                                {% if item.icon %}
-                                    <a href="#" class="service-list__item-link">
-                                        {% view '@icon' with {
-                                            icon: item.icon
-                                        } %}
+                    <ul class="side-bar__service-list">
+                        {% for item in block.serviceSection %}
+                            <li class="side-bar__service-item">
+                                {% if item.href %}
+                                    <a href="{{ item.href }}" class="side-bar__service-link">
+                                        {% if item.icon %}
+                                            {% view '@icon' with {
+                                                icon: item.icon
+                                            } %}
+                                        {% else %}
+                                            {{item.text}}
+                                        {% endif %}
                                     </a>
-                                {% else %}
-                                    <a href="#" class="service-list__item-link">{{item.text}}</a>
                                 {% endif %}
                             </li>
                         {% endfor %}
@@ -39,7 +41,13 @@
                 </div>
             </div>
             <div class="side-bar__logo">
-                <img src="./././img/logo-circle.png" alt="logo">
+                {% if block.logo %}
+                    {% view '@icon' with {
+                        icon: {
+                            name: 'logoCircle'
+                        }
+                    } %}
+                {% endif %}
             </div>
         </div>
     </div>

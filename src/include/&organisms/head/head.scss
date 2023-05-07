@@ -11,53 +11,51 @@
         position: static;
         left: 0;
         -webkit-transform: translateX(0);
-        padding-top: 2.25rem;
-        padding-right: 4rem;
-        padding-left: 6rem;
+        padding-top: rem(36);
+        padding-right: rem(64);
+        padding-left: rem(96);
     }
 
     @include media-breakpoint-up(lg){
-        padding-right: 7.5rem;
-        padding-left: 7.5rem;
+        padding-right: rem(120);
+        padding-left: rem(120);
     }
 
     &__logo{
         position: relative;
-        width: 6rem;
-        transition: opacity .3s ease;
+        width: rem(96);
+        
     
         @include media-breakpoint-up(md){
-            width: 8.75rem;
-            height: 2.5rem;
+            width: rem(140);
+            height: rem(40);
         }
     
         @include media-breakpoint-only(lg){
-            max-width: 8.75rem;
-            max-height: 2.5rem;
+            max-width: rem(140);
+            max-height: rem(40);
         }
     }
     
     &__logo-link{
-        display: inline-block;
         z-index: 1;
-        width: auto;
-        height: 100%;
-    }
-    
-    &__logo-link img{
-        width: 100%;
-        height: 3rem;
-    
-        @include media-breakpoint-up(md){
-            height: 100%;
+        height: rem(48);
+        transition: opacity .3s ease;
+
+        @include hover{
+            opacity: 0.5;
         }
 
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-up(md){
+            display: inline-block;
+        }
+
+        @include media-breakpoint-up(sm){
             display: none;
         }
     }
     
-    &__list{
+    &__items{
         display: none;
         list-style: none;
         padding: 0;
@@ -83,16 +81,13 @@
         }
     }
     
-    &__item-link{
+    &__link{
         display: inline-block;
         width: 100%;
         height: 100%;
-        font-weight: 700;
-        font-size: .6875rem;
         color: $color-white;
-        line-height: 1.375rem;
-        letter-spacing: .04938rem;
-        text-transform: uppercase;
+
+        @include text-label;
     }
 }
 

@@ -2,8 +2,8 @@
     cursor: pointer;
     display: inline-flex;
     flex-direction: column;
-    width: 2rem;
-    height: 2rem;
+    width: rem(32);
+    height: rem(32);
     color: currentColor;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -20,11 +20,11 @@
 }
 
 .burger span{
-    width: 1.5rem;
-    height: 1px;
+    width: rem(24);
+    height: rem(0.0625);
     background-color: currentColor;
 }
 
 .burger span:not(:last-child){
-    margin-bottom: 6px;
+    margin-bottom: rem(7);
 }

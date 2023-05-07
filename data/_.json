@@ -11,7 +11,8 @@
   "header": {
     "head": {
       "logo": {
-        "href": "./"
+        "href": "./",
+        "name": "logo"
       },
       "items": [
         {
@@ -48,15 +49,20 @@
       ],
       "serviceSection": [
         {
+          "href": "javascript:void(0);",
           "icon": {
             "name": "32/eye"
           }
         },
         {
+          "href": "javascript:void(0);",
           "text": "EN"
         }
         
-      ]
+      ],
+      "logo": {
+        "name": "logoCircle"
+      }
     }
   },
   "footer": {
@@ -162,5 +168,140 @@
           "name": "32/uplab"
         }
     }
+  },
+  "menu": {
+    "nav": [
+      {
+        "text": "Поступающим",
+        "href": "javascript:void(0);",
+        "subMenuList":[
+          {
+            "text": "Прием в университет",
+            "href":"javascript:void(0);",
+            "subMenuItem": [
+              {
+                "text": "Прием 2019",
+                "href": "javascript:void(0);"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Студентам",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Сотрудникам",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Партнерам",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Факультеты и институты",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Дополнительное образование",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Научная деятельность",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Проекты и сообщества",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Университет",
+        "href": "javascript:void(0);"
+      }
+    ],
+    "cards": [
+      {
+        "text": "Музей истории полиграфии",
+        "background": "",
+        "isMain": true,
+        "hover": false
+      },
+      {
+        "text": "FDR Moscow",
+        "background": "",
+        "isMain": false,
+        "hover": true
+      },
+      {
+        "text": "Смарт Мото",
+        "background": "",
+        "isMain": false,
+        "hover": false
+      }
+    ],
+    "info": {
+      "links": [
+        {
+          "href": "javascript:void(0);",
+          "text": "Новости университета",
+          "icon": {
+            "name": "32/news"
+          }
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Календарь мероприятий",
+          "icon":{
+            "name": "32/сalendar"
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "href": "javascript:void(0);",
+          "text": "Приемная комиссия"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "+7(495)223-05-22"
+        }
+      ]
+    },
+      
+    "social": [
+      {
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/fb"
+        }
+      },
+      {
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/inst"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/vk"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/youtube"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/mel"
+        }
+      },{
+        "href": "javascript:void(0);",
+        "icon": {
+          "name": "32/dzen"
+        }
+      }
+    ]
   }
 }
