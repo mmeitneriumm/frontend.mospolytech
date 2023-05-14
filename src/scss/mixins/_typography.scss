@@ -44,8 +44,8 @@
 @mixin h4 {
 	font-size: rem(17);
 	line-height: 1.4;
-	font-family: $ff-base;
-	font-weight: 500;
+	font-family: $ff-title;
+	font-weight: 700;
 
 	@include media-breakpoint-up(md) {
 		font-size: rem(24);
@@ -109,5 +109,4 @@
 	letter-spacing: rem(0.79008);
 	text-transform: uppercase;
 	font-family: $ff-base;
-
 }

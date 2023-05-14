@@ -32,15 +32,17 @@
             <div class="footer__social">
                 {% for item in footer.social %}
                     <div class="footer__social-item">
-                        <a href="javascript:void(0);" class="footer__social-link">
-                            {% if item.icon %}
-                                <i class="footer__social-icon">
-                                    {% view '@icon' with {
-                                        icon: item.icon
-                                    } %}
-                                </i>
-                            {% endif %}
-                        </a>
+                        {% if item.href %}
+                            <a href="{{item.href}}" class="footer__social-link">
+                                {% if item.icon %}
+                                    <i class="footer__social-icon">
+                                        {% view '@icon' with {
+                                            icon: item.icon
+                                        } %}
+                                    </i>
+                                {% endif %}
+                             </a>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>

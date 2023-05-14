@@ -223,21 +223,21 @@
     "cards": [
       {
         "text": "Музей истории полиграфии",
-        "background": "",
-        "isMain": true,
-        "hover": false
+        "image": {
+          "src": "tmp/Bitmap.png"
+        },
+        "href": "javascript:void(0);"
       },
       {
         "text": "FDR Moscow",
-        "background": "",
-        "isMain": false,
-        "hover": true
+        "href": "javascript:void(0);"
       },
       {
         "text": "Смарт Мото",
-        "background": "",
-        "isMain": false,
-        "hover": false
+        "image": {
+          "src": "tmp/moto.png"
+        },
+        "href": "javascript:void(0);"
       }
     ],
     "info": {
@@ -259,16 +259,15 @@
       ],
       "contacts": [
         {
-          "href": "javascript:void(0);",
-          "text": "Приемная комиссия"
+          "text": "Приемная комиссия",
+          "href": "javascript:void(0);"
         },
         {
-          "href": "javascript:void(0);",
+          "href": "tel:+7(495)223-05-22;",
           "text": "+7(495)223-05-22"
         }
       ]
-    },
-      
+    }, 
     "social": [
       {
         "href": "javascript:void(0);",

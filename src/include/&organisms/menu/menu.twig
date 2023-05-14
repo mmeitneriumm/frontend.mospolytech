@@ -1,24 +1,89 @@
 <div class="menu">
-    {% if menu.nav %}
-        <div class="menu__nav">
-            <ul class="menu__nav-list">
-                {% for item in menu.nav %}
-                    <li class="menu__nav-item">{{item.text}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
-    {% if menu.cards %}
-        <div class="menu__card"></div>
-    {% endif %}
-    {% if menu.info %}
-    <div class="menu__info">
-        {% if menu.info.links %}
-            <div class="menu__info-links"></div>
+    <div class="menu__wrapper">
+        {% if menu.nav %}
+            <div class="menu__nav">
+                <ul class="menu__nav-list">
+                    {% for item in menu.nav %}
+                        <li class="menu__nav-item">
+                            {% if item.href %}
+                                <a href="{{item.href}}" class="menu__nav-link">{{item.text}}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         {% endif %}
-        {% if menu.info.contacts %}
-            <div class="menu__info-contacts"></div>
+        {% if menu.cards %}
+            <div class="menu__cards">
+                {% for item in menu.cards %}
+                    <div class="menu__cards-item">
+                        {% if item.href %}
+                            <a href="{{item.href}}" class="menu__cards-link">
+                                {% if item.text %}{{item.text}}{% endif %}
+                                {% if item.image %}
+                                    {% view '@image' with {
+                                        image: item.image
+                                    } %}
+                                {% endif %}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if menu.info %}
+            <div class="menu__info">
+                {% if menu.info.links %}
+                    <ul class="menu__info-links">
+                        {% for item in menu.info.links %}
+                            <li class="menu__info-item">
+                                {% if item.href %}
+                                    <a href="{{item.href}}" class="menu__info-link">
+                                        {% if item.icon %}
+                                            {% view '@icon' with {
+                                                icon: item.icon
+                                            } %}
+                                        {% endif %}
+                                    {{item.text}}
+                                    </a>
+                                {% endif %}  
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% if menu.info.contacts %}
+                    <ul class="menu__info-contacts">
+                        {% for item in menu.info.contacts %}
+                            <li class="menu__info-item">
+                                {% if item.href %}
+                                    <a href="{{item.href}}" class="menu__info-link">{{item.text}}</a>
+                                {% else %}
+                                    <div class="menu__info-text">{{item.text}}</div>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if menu.social %}
+            <div class="menu__social">
+                {% for item in menu.social %}
+                    <div class="menu__social-item">
+                        {% if item.href %}
+                            <a href="{{item.href}}" class="menu__social-link">
+                                {% if item.icon %}
+                                    <i class="menu__social-icon">
+                                        {% view '@icon' with {
+                                            icon: item.icon
+                                        } %}
+                                    </i>
+                                {% endif %}
+                             </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
         {% endif %}
     </div>
-    {% endif %}
 </div>
