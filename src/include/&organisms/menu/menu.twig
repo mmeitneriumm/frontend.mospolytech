@@ -20,11 +20,14 @@
                         {% if item.href %}
                             <a href="{{item.href}}" class="menu__cards-link">
                                 {% if item.text %}{{item.text}}{% endif %}
-                                {% if item.image %}
-                                    {% view '@image' with {
-                                        image: item.image
-                                    } %}
-                                {% endif %}
+                                    {% if item.image %}
+                                        <div class="menu__cards-background"></div>
+                                        <div class="menu__cards-image">
+                                            {% view '@image' with {
+                                                image: item.image
+                                            } %}
+                                        </div>
+                                    {% endif %}
                             </a>
                         {% endif %}
                     </div>

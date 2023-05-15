@@ -71,6 +71,29 @@
 		position: relative;
     }
 
+    &__cards-background {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: rem(-600);
+		bottom: rem(-600);
+		overflow: hidden;
+		pointer-events: none;
+    }
+
+    &__image {
+		position: relative;
+		padding-bottom: 66.67%;
+		margin-left: auto;
+		z-index: 1;
+
+        .image {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+    }
+
     &__cards-link {
         color: $color-white;
 

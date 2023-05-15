@@ -8,7 +8,7 @@ import './utils/userAgent';
 
 import Menu from "./components/menu";
 
-import './libs';
+import libs from'./libs';
 
 
 
@@ -23,5 +23,6 @@ __webpack_public_path__ = window.__webpack_public_path__ || '';
 
 document.addEventListener('DOMContentLoaded', () => {
 	document.documentElement.classList.add('content-loaded');
+    libs.init();
     Menu.init();
 })
